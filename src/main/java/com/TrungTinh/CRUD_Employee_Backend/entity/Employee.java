@@ -22,4 +22,8 @@ public class Employee {
     private String department;
 
     private String img;
+    public String getImgUrl() {
+        return "/uploads/" + this.img;
+    }
+
 }

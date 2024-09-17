@@ -42,10 +42,11 @@ public class EmployeeController {
             @RequestParam("name") String name,
             @RequestParam("email") String email,
             @RequestParam("phone") String phone,
+            @RequestParam("diachi") String diachi, 
             @RequestParam("department") String department,
             @RequestParam(value = "img", required = false) MultipartFile img) {
 
-        Employee updatedEmployee = employeeService.updateUser(id, name, email, phone, department, img);
+        Employee updatedEmployee = employeeService.updateUser(id, name, email, phone, department, diachi, img);
         return ResponseEntity.ok(updatedEmployee);
     }
     @DeleteMapping("/delete/{id}")
